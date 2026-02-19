@@ -16,8 +16,8 @@ pipeline {
                 sh 'docker rm node-container || true'
                 
                 // Run the new container
-                sh 'docker run -d --name node-container -p 8082:3000 node-github-app'
-                echo 'Build Successful! Check http://localhost:8082'
+                sh 'docker run -d --name node-container -p 8084:3000 node-github-app'
+                echo 'Build Successful! Check http://localhost:8084'
             }
         }
     }
