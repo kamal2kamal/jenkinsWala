@@ -5,7 +5,8 @@ pipeline {
         stage('Build Image') {
     steps {
         // Adding DOCKER_BUILDKIT=1 makes the "Sending context" much faster
-        sh 'DOCKER_BUILDKIT=1 docker build -t node-github-app .'
+      //  sh 'DOCKER_BUILDKIT=1 docker build -t node-github-app .'
+    sh 'docker build -t node-github-app .'
     }
 }
 
