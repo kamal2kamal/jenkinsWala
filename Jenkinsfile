@@ -3,11 +3,11 @@ pipeline {
 
     stages {
         stage('Build Image') {
-            steps {
-                // This builds the image using the Dockerfile we just created
-                sh 'docker build -t node-github-app .'
-            }
-        }
+    steps {
+        // Adding DOCKER_BUILDKIT=1 makes the "Sending context" much faster
+        sh 'DOCKER_BUILDKIT=1 docker build -t node-github-app .'
+    }
+}
 
         stage('Deploy') {
             steps {
